@@ -1,4 +1,4 @@
-﻿using System.Numerics;
+using System.Numerics;
 using Content.Client.Guidebook;
 using Content.Client.Guidebook.Components;
 using Content.Shared.Guidebook;
@@ -61,11 +61,11 @@ namespace Content.Client.UserInterface.Controls
             {
                 if (relativeMousePos.Y < DRAG_MARGIN_SIZE)
                 {
-                    mode = DragMode.Top;
+                    mode |= DragMode.Top;
                 }
                 else if (relativeMousePos.Y > Size.Y - DRAG_MARGIN_SIZE)
                 {
-                    mode = DragMode.Bottom;
+                    mode |= DragMode.Bottom;
                 }
 
                 if (relativeMousePos.X < DRAG_MARGIN_SIZE)
